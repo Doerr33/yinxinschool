@@ -1,0 +1,24 @@
+.menu {
+  height: 200rpx;
+  width: 100%;
+}
+.menu .swiperItem {
+  display: flex;
+}
+.menu .swiperItem .iconItem {
+  margin: 20rpx;
+  margin-left: 32rpx;
+  height: 100rpx;
+  width: 100rpx;
+}
+.menu .swiperItem .iconItem image {
+  width: 100%;
+  height: 100%;
+  border-radius: 38rpx;
+}
+.menu .swiperItem .iconText {
+  margin: 30rpx;
+  margin-top: 0rpx;
+  font-size: 24rpx;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+<view class="menu">
+  <swiper>
+    <swiper-item class="swiperItem">
+      <view wx:for="{{iconMenuList}}">
+          <view class="iconItem">
+            <image mode="aspectFill" src="{{iconMenuList[index].iconUrl}}"></image>
+          </view>
+          <view class="iconText">{{iconMenuList[index].classIfy}}</view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

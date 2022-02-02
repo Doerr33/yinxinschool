@@ -1,0 +1,43 @@
+.card-swiper {
+  margin-top: 120rpx;
+	height: 380rpx;
+}
+
+.card-swiper swiper-item {
+	width: 630rpx !important;
+  left: 60rpx;
+  /* 
+    文档：https://blog.csdn.net/qq_26780317/article/details/80736514
+  */
+	box-sizing: border-box;
+  padding: 40rpx 0rpx 70rpx;
+  /* 溢出：初始化
+  文档：https://www.runoob.com/cssref/css-initial.html
+  */
+	overflow: initial;
+}
+
+.card-swiper swiper-item .swiper-item {
+	width: 100%;
+	display: block;
+	height: 100%;
+  border-radius: 10rpx;
+  /* 
+    Transform属性应用于元素的2D或3D转换。这个属性允许你将元素旋转，缩放，移动，倾斜等。
+    文档：https://www.runoob.com/cssref/css3-pr-transform.html
+  */
+  transform: scale(0.8);
+  /* 同上 */
+	transition: all 0.2s ease-in 0s;
+	overflow: hidden;
+}
+
+.card-swiper swiper-item.cur .swiper-item {
+  /* transform: none;清空所有转换属性 */
+  transform: none;
+  /* 所有样式缓动0.2秒，由慢到快 
+  文档:https://blog.csdn.net/weixin_46188204/article/details/112564073
+  */
+	transition: all 0.2s ease-in 0s;
+}
+

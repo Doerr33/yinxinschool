@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "swiper_card":"../../components/swiper_card/swiper_card",
+    "icon_menu":"../../components/icon_menu/icon_menu",
+    "card":"../../components/card/card",
+    "timeline":"../../components/timeline/timeline"
+  }
+}

@@ -1,0 +1,7 @@
+<view class="cardTotal">
+  <view class="cardText">{{cardTitle}}</view>
+  <view class="cardComponents">
+  <!-- 定义一个插槽 -->
+  <slot></slot>
+  </view>
+</view>

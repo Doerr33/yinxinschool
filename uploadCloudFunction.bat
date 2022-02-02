@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-5gfghktmbbaf16c8 --n quickstartFunctions --r --project "C:\Users\86155\OneDrive - YCloud\12code\07微信小程序\LNU" --report_first --report

@@ -1,0 +1,40 @@
+<!-- 
+  父组件向子组件传递数据：自定义属性
+ -->
+<swiper_card swiperList="{{swiperList}}"></swiper_card>
+<icon_menu iconMenuList="{{iconMenuList}}">图标</icon_menu>
+<card cardTitle="专题推荐">
+  <swiper class="swiper" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <!-- 通过样式来控制当前页面显示的效果和其他不同 -->
+    <swiper-item class="swiper-item" wx:for="{{swiperListSubject}}">
+      <image src="{{item.url}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+</card>
+<card cardTitle="勤工俭学">
+  <swiper class="swiper" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <!-- 通过样式来控制当前页面显示的效果和其他不同 -->
+    <swiper-item wx:for="{{workStudyProgramList}}">
+      <view class="workStudyProgram">
+        <view class="workStudyLeft">
+          <image mode="aspectFill" src="{{item.imageUrl}}"></image>
+        </view>
+        <view class="workStudyRight">
+          <view class="workStudyText">   
+            <text>
+              {{item.Introduction}}
+            </text>
+          </view>
+          <view class="workStudyButton">立即报名</view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</card>
+<card cardTitle="关于我们">
+    <video controls="true" autoplay="true" initial-time = "1" src="https://video.699pic.com/videos/78/57/56/b_sjHhHS4A3KSR1641785756_10s.mp4"></video>
+</card>
+
+<view class="timeline">
+  <timeline></timeline>
+</view>
