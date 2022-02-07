@@ -20,6 +20,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    toDetail(e){
+      let index = e.currentTarget.dataset.index;
+      wx.navigateTo({
+        url:"/" +  this.properties.iconMenuList[index].path
+      })
+    }
   }
 })

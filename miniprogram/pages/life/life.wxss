@@ -1,0 +1,132 @@
+page{
+  background-color: #F6F6F6;
+}
+.addlife{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  right: 10rpx;
+  bottom: 100rpx;
+  justify-content: center;
+  align-items: center;
+}
+.addlife image{
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+/* 学习模块 */
+.learnTabs{
+  padding: 20rpx;
+  background-color: white;
+}
+.imgNickname{
+  display: flex;
+  height: 80rpx;
+}
+.imgNickname image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  background-color: blue;
+  line-height: 150rpx;
+}
+.imgNickname text{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  height: 80rpx;
+  align-items: center;
+  line-height: 80rpx;
+}
+.learnContent{
+  font-size: 30rpx;
+  width: 600rpx;
+  margin-left: 100rpx;
+  margin-bottom: 10rpx;
+  /* padding-right: 20rpx; */
+  /* background-color: aquamarine; */
+  white-space:pre-line;
+}
+.imagesList{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 100rpx;
+  /* margin-right: 10rpx; */
+}
+.imagesList image{
+  margin: 3rpx;
+  margin-bottom: 0rpx;
+  /* background-color: red; */
+  width: 190rpx;
+  height: 190rpx;
+}
+.oneImages image{
+  width: 550rpx;
+  height: 300rpx;
+}
+.learnContent text{
+  word-break: break-all;
+}
+.learnTime{
+  display: flex;
+  position: relative;
+  height: 30rpx;
+  margin-top: 15rpx;
+  margin-left: 100rpx;
+  margin-bottom: 20rpx;
+}
+/* 点赞评论 */
+.more{
+  /* background-color: chartreuse; */
+  position: absolute;
+  right: 10rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 60rpx;
+}
+.clickLoveCommentPannel{
+  position: absolute;
+  right: 80rpx;
+  width: 300rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: #7a7a7a;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: white;
+  /* 文字居中 */
+  text-align: center;
+}
+.tab{
+  display: inline-block;
+  width: 150rpx;
+}
+/* 点赞列表 */
+.learnLove{
+  background-color: rgb(246, 243, 243);
+  /* height: 40rpx; */
+  line-height: 40rpx;
+  /* width: 100%; */
+  margin-right: 10rpx;
+  margin-left: 100rpx;
+  word-break: break-all;
+}
+.likeCommentLine{
+  height: 1rpx;
+  background: rgb(224, 221, 221);
+  margin-right: 10rpx;
+  margin-left: 100rpx;
+}
+/* 评论列表 */
+.learnComments{
+  background-color: rgb(246, 243, 243);
+  /* height: 40rpx; */
+  line-height: 40rpx;
+  /* width: 100%; */
+  margin-right: 10rpx;
+  margin-left: 100rpx;
+  word-break: break-all;
+}

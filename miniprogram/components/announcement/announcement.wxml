@@ -1,0 +1,14 @@
+<!-- 公告 -->
+<view class='adsec'>
+  <text class='text-red cuIcon-notificationfill'></text>
+  <swiper class="swiper_container" autoplay="true" circular="true" interval="2000">
+    <block wx:for="{{msgList}}">
+      <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
+        <swiper-item>
+          <view class="swiper_item">{{item.title}}</view>
+        </swiper-item>
+      </navigator>
+    </block>
+  </swiper>
+</view>
+<!-- 公告 end -->

@@ -1,5 +1,5 @@
 .card-swiper {
-  margin-top: 120rpx;
+  /* margin-top: 120rpx; */
 	height: 380rpx;
 }
 

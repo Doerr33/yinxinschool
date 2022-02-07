@@ -1,0 +1,27 @@
+@import "../../colorui/icon.wxss";
+.myPicker {
+  padding: 30rpx;
+  height: 240rpx;
+  background-color: white;
+}
+.myPicker .pickerTitle {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.myPicker .picker {
+  padding-left: 40rpx;
+  border-radius: 5rpx;
+  height: 80rpx;
+  background-color: #e2e0e1;
+  line-height: 80rpx;
+}
+.picker-arrow{
+  position: absolute;
+  right: 60rpx;
+}
+.pickerLine{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 1rpx;
+  background:#e2e0e1;
+}

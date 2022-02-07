@@ -14,6 +14,20 @@ App({
       });
     }
 
-    this.globalData = {};
+    this.globalData = {
+
+    };
+    // 将用户信息全局存取
+    try {
+      // 从本地获取用户信息到全局变量中
+      var userInfo = wx.getStorageSync('userInfo')
+      console.log("appjs userInfo",userInfo);
+      if (userInfo) {
+        this.globalData.userInfo = JSON.parse(userInfo);
+        console.log("appjs userInfo",this.globalData.userInfo);
+      }
+    } catch (e) {
+      console.log('app js:', '用户未登录')
+    }
   }
 });

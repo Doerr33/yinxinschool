@@ -1,0 +1,69 @@
+@import "../../colorui/icon.wxss";
+.publishMessImage {
+  padding: 30rpx;
+  /* height: 600rpx; */
+  background-color: rgb(251, 251, 251);
+}
+.publishMessImage .textArea {
+  height: 200rpx;
+  background-color: rgb(255, 255, 255);
+}
+.textArea textarea{
+  width: 100%;
+  height: 100%;
+}
+.publishMessImage .addImage {
+  border-radius: 10rpx;
+  margin: 5rpx;
+  padding: 50rpx;
+  /* 水平垂直居中 */
+  text-align: center;
+  justify-content: center;
+  background-color: #e2e0e1;
+  height: 220rpx;
+  width: 220rpx;
+}
+.publishMessImage .addImageList{
+  position: relative;
+  border-radius: 10rpx;
+  margin: 5rpx;
+  width: 220rpx;
+  height: 220rpx;
+}
+.addImageList image{
+  width: 100%;
+  height: 100%;
+}
+.imagesList{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.addIcon{
+  font-size: 70rpx;
+}
+.delImage{
+  position: absolute;
+  background-color:rgba(105, 105, 105, 0.8);
+  top: 0;
+  right: 0;
+}
+.infoText{
+  margin: 20rpx 0;
+}
+.infoLine{
+  width: 100%;
+  height: 1rpx;
+  background: #e2e0e1;
+}
+.publish{
+  background-color: green;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 600rpx;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  border-radius: 40rpx;
+}

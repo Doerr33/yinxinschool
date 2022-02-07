@@ -1,7 +1,7 @@
 <view class="menu">
   <swiper>
     <swiper-item class="swiperItem">
-      <view wx:for="{{iconMenuList}}">
+      <view wx:for="{{iconMenuList}}" bindtap="toDetail" data-index = "{{index}}">
           <view class="iconItem">
             <image mode="aspectFill" src="{{iconMenuList[index].iconUrl}}"></image>
           </view>

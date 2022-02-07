@@ -1,0 +1,10 @@
+<view class="myPicker">
+  <view class="pickerTitle">{{plate}}</view>
+  <view class="picker">
+    <picker bindchange="bindChangePicker" value="{{index}}" range="{{pickerArray}}">
+      {{pickerArray[index]}}
+      <text class="picker-arrow cuIcon-unfold"></text>
+    </picker>
+  </view>
+  <view class="pickerLine"></view>
+</view>

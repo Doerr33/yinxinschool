@@ -1,4 +1,5 @@
 {
+  "navigationStyle": "custom",
   "usingComponents": {
     "swiper_card":"../../components/swiper_card/swiper_card",
     "icon_menu":"../../components/icon_menu/icon_menu",

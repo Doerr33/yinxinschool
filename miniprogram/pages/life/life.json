@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "swiper_card":"../../components/swiper_card/swiper_card",
+    "announcement":"../../components/announcement/announcement",
+    "tabs":"../../components/tabs/tabs"
+  }
+}

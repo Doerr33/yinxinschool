@@ -1,0 +1,13 @@
+<mypicker 
+bindPickerIndex = "getPickerIndex" 
+plate="{{plate}}" 
+pickerArray = "{{pickerArray}}"></mypicker>
+
+
+<publishMessageImage 
+images = "{{images}}"
+pickerIndex = "{{pickerIndex}}"
+database = "{{database}}"
+userInfo = "{{userInfo}}"
+bindimagesChange = "imagesChange" 
+></publishMessageImage>
