@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "schooltool":"../../components/schooltool/schooltool"
+  }
+}

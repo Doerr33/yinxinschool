@@ -12,9 +12,9 @@ Page({
     msgList: [],
     tabs: [],
     // 获取信息列表
-    lifeList:[],
-    // 显示点赞评论面板
-    showLoveCommPannel: false,
+    lifeList: [],
+    // 显示点赞评论面板,当index和获取到的信息的index一致时显示
+    showOperationPannelIndex: -1,
     // 点赞列表
     likeList: [],
   },
@@ -53,27 +53,149 @@ Page({
   },
   // 显示点赞评论面板
   showLikeCommentPannel(e) {
-    this.setData({
-      showLoveCommPannel: this.data.showLoveCommPannel ? false : true
-    })
+    console.log("showOperationPannel", e)
+    var index = e.currentTarget.dataset.index;
+    if (this.data.showOperationPannelIndex == index) {
+      this.setData({
+        showOperationPannelIndex: -1
+      })
+    } else {
+      this.setData({
+        showOperationPannelIndex: index
+      })
+    }
   },
-
-  onLoad(e) {
-    this.getNeed();
-    this.getLifeList();
-  },
-  getLifeList(e){
-    db.get().then(res=>{
-      console.log("获取生活信息",res);
-      res.data.forEach((v,i)=>{
-        console.log("picker",v);
-        switch(v.pickerIndex){
+  // 获取life信息
+  getLifeList(e) {
+    db.get().then(res => {
+      console.log("获取生活信息", res);
+      res.data.forEach((v, i) => {
+        console.log("picker", v);
+        switch (v.pickerIndex) {
           case 0:
             this.setData({
-              lifeList:this.data.lifeList.concat(v)
+              lifeList: this.data.lifeList.concat(v)
             })
         }
       })
+    })
+  },
+  // 点赞函数
+  async clickLearnLike(e) {
+    console.log("点赞函数", e.currentTarget.dataset.index);
+    await this.checkUserInfo();
+    await this.clickLike(e.currentTarget.dataset.index)
+  },
+  // 判断用户是否登录
+  checkUserInfo() {
+    return new Promise((resolve, reject) => {
+      let userInfo = checkUserInfo.checkUserInfo();
+      if (userInfo != null) {
+        this.setData({
+          userInfo: userInfo
+        })
+        resolve(userInfo);
+      } else {
+        wx.navigateTo({
+          url: '/pages/login/login',
+        })
+        reject("未登录");
+      }
+      console.log("检查1");
+    })
+  },
+  clickLike(index) {
+    return new Promise(resolve => {
+      let lifeLearnData = this.data.lifeList[index];
+      let likeList = lifeLearnData.likeList;
+      var isHaveLove = false;
+      likeList.forEach((v, i) => {
+        if (this.data.userInfo.openid == v.openid) {
+          isHaveLove = true;
+          likeList.splice(i, 1);
+          console.log(likeList);
+          wx.cloud.callFunction({
+            name: 'lifeClickLike',
+            data: {
+              type: 0,
+              circleId: lifeLearnData._id
+            }
+          }).then(res => {
+            console.log("取消赞成功", res);
+          }).catch(err => {
+            console.error("取消赞失败", err);
+          })
+          // 取消赞
+          lifeLearnData.isLove = false;
+        }
+      })
+      if (!isHaveLove) {
+        // 本地点赞
+        likeList.push({
+          nickName: this.data.userInfo.nickName,
+          openid: this.data.userInfo.openid
+        });
+        wx.cloud.callFunction({
+          name: 'lifeClickLike',
+          data: {
+            type: 1,
+            circleId: lifeLearnData._id,
+            nickName: this.data.userInfo.nickName
+          }
+        }).then(res => {
+          console.log("点赞成功", res);
+        }).catch(err => {
+          console.error("点赞失败", err);
+        })
+        // 点赞
+        lifeLearnData.isLove = true;
+      }
+
+      this.setData({
+        lifeList: this.data.lifeList,
+        showOperationPannelIndex: -1
+      })
+      console.log("调用函数2");
+    })
+  },
+  dingyue(e) {
+    wx.requestSubscribeMessage({
+      tmplIds: ['Er4q6nVn9QW2F1i6XF7kuSeDY8KStAg89mVBJ1DNxPg'],
+      success(res) {
+        console.log("订阅成功", res);
+      }
+    })
+  },
+  send(e) {
+    wx.cloud.callFunction({
+        name: "subscribeInfo"
+      })
+      .then(res => {
+        console.log("发送成功", res);
+      })
+  },
+  // 预览图片
+  viewImages(e) {
+    // console.log("朋友圈条目",index);
+    var current = e.target.dataset.src;
+    var index = e.target.dataset.index
+    console.log(e);
+    wx.previewImage({
+      current: current, // 当前显示图片的http链接  
+      urls: this.data.lifeList[index].images // 需要预览的图片http链接列表  
+    })
+  },
+  onLoad(e) {
+    this.getNeed();
+    this.getLifeList();
+    console.log();
+    this.setData({
+      userInfo:getApp().globalData.userInfo
+    })
+  },
+  onShow(){
+    this.setData({
+      userInfo:getApp().globalData.userInfo
     })
   }
 })

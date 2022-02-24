@@ -1,0 +1,13 @@
+<scroll-view class="tabscroll" scroll-y="true" style="height: 500rpx;width: 90rpx;">
+  <view bindtap="changeTabs" class="view-tab {{index==TabCur?'textSelected':''}}" wx:for="{{tabContent}}" wx:key="index" 
+    data-index="{{index}}">{{item}}</view>
+</scroll-view>
+<!-- 学校切换 -->
+<view wx:if = "{{!changeSchool}}">
+  <image class="school" src="https://service-2s4emiem-1301257241.hk.apigw.tencentcs.com/release/WuRenKG/15%E9%A1%B9%E7%9B%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/01%E5%9B%BE%E6%A0%87/%E5%85%B6%E4%BB%96/school.png" bindtap = "changeSchool"></image>
+  <text class="schooltext">蒲河</text>
+</view>
+<view wx:else>
+  <image class="school" src="https://service-2s4emiem-1301257241.hk.apigw.tencentcs.com/release/WuRenKG/15%E9%A1%B9%E7%9B%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/01%E5%9B%BE%E6%A0%87/%E5%85%B6%E4%BB%96/school.png" bindtap = "changeSchool"></image>
+  <text class="schooltext">崇山</text>
+</view>

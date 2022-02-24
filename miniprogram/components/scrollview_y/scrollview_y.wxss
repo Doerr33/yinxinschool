@@ -1,0 +1,41 @@
+.tabscroll {
+    position: fixed;
+    right: 0rpx;
+    top: 300rpx;
+    z-index: 999;
+}
+
+.view-tab {
+    background: rgba(255, 255, 255, 0.6);
+    width: 90rpx;
+    height: 70rpx;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textSelected {
+    background-color: rgba(60, 179, 113, 0.4);
+}
+
+.school{
+    z-index: 999;
+    width: 60rpx;
+    height: 60rpx;
+    position: fixed;
+    right: 10rpx;
+    top: 850rpx;
+  }
+  .schooltext{
+    z-index: 999;
+    position: fixed;
+    right: 10rpx;
+    top: 910rpx;
+    margin-right: 10rpx;
+    font-size: 20rpx;
+  }
+  .image-school{
+    z-index: 99999;
+  }

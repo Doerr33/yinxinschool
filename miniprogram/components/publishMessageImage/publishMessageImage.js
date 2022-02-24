@@ -20,10 +20,22 @@ Component({
       type: Number,
       value: 0
     },
+    pickerIndex1: {
+      type: Number,
+      value: 0
+    },
     // 传过来的数据库
     database: {
       type: String,
       value: ''
+    },
+    location:{
+      type:String,
+      value:""
+    },
+    locationConfig:{
+      type:Object,
+      value:{}
     }
   },
 
@@ -104,7 +116,11 @@ Component({
         }).then(res => {
           resolve(res)
           console.log("上传成功",res);
-          this.data.imagesID.push(res.fileID)
+          let imageConfig = {};
+          imageConfig.url = res.fileID;
+          imageConfig.pathUrl = "";
+          imageConfig.id = Date.parse(new Date());
+          this.data.imagesID.push(imageConfig)
         }).catch(err => {
           this.setData({
             imagesID:[]
@@ -171,12 +187,21 @@ Component({
     publish(e){
       db.collection(this.properties.database).add({
         data: {
+          // 内容图片
           content:this.data.content,
           images:this.data.imagesID,
+          // 第一个picker
           pickerIndex:this.data.pickerIndex,
+          // 第二个picker
+          pickerIndex1:this.data.pickerIndex1,
           userInfo:this.data.userInfo,
+          // life点赞评论列表
           likeList:[],
           commentList:[],
+          // 标记点配置对象
+          location:this.data.location,
+          locationConfig:this.data.locationConfig,
+
           time:js_date_time.js_date_time(new Date())
         }
       }).then(res => {

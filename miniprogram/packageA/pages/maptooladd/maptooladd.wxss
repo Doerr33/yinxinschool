@@ -1,0 +1,35 @@
+page {
+    background-color: white;
+    font-size: 30rpx;
+}
+.inputLocation{
+    width: 700rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+}
+
+.getLocationTitle{
+    position: relative;
+    width: 700rpx;
+    margin: 0 auto;
+    line-height: 100rpx;
+    margin-top: 20rpx;
+    justify-content: center;
+    
+}
+.getLocationTitle text{
+    line-height: 100rpx;
+}
+.getLocationTitle image{
+    position: absolute;
+    right: 20rpx;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.pickerLine{
+    margin-top: 30rpx;
+    width: 100%;
+    height: 1rpx;
+    background:#e2e0e1;
+  }

@@ -15,7 +15,8 @@ Page({
     this.getBackground();
   },
   // 获取index页面背景
-  getBackground(){
+  getBackground(e){
+    console.log(e);
     db.get()
     .then(res=>{
       this.setData({

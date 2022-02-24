@@ -2,10 +2,20 @@
   "pages": [
     "pages/index/index",
     "pages/life/life",
+    "pages/schooltools/schooltools",
     "pages/addlife/addlife",
-    "pages/login/login",
-    "pages/cesh/ceshi"
+    "pages/login/login"
   ],
+  "subpackages": [
+    {
+    "root": "packageA",
+    "pages": [
+      "pages/maptool/maptool",
+      "pages/maptooldetail/maptooldetail",
+      "pages/maptooladd/maptooladd"
+    ]
+  }
+],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",

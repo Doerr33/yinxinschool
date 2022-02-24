@@ -3,7 +3,8 @@ function checkUserInfo() {
   if (getApp().globalData.userInfo) {
     userInfo = getApp().globalData.userInfo
   } else if(wx.getStorageSync('userInfo')){
-    userInfo = JSON.parse(wx.getStorageSync('userInfo'))
+    let jsonUserInfo = JSON.parse(userInfo)
+    userInfo = jsonUserInfo
   } else{
     userInfo = null;
   }

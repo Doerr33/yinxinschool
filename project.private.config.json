@@ -1,36 +1,60 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "",
-          "pathName": "pages/life/life",
-          "query": "",
-          "scene": null
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "name": "",
-          "pathName": "pages/addlife/addlife",
-          "query": "",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "name": "登录页面",
-          "pathName": "pages/login/login",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "pages/life/life",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/addlife/addlife",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "登录页面",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/schooltools/schooltools",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "packageA/pages/maptool/maptool",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "packageA/pages/maptooldetail/maptooldetail",
+                    "query": "markerId=1615293190000&markerContent=%7B%22_id%22%3A%2228ee4e3e60476b0609c09790370d77f8%22%2C%22id%22%3A1615293190000%2C%22Location%22%3A%22%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BA%22%2C%22classify%22%3A%220%22%2C%22school%22%3A%220%22%2C%22latitude%22%3A41.833416%2C%22longitude%22%3A123.406075%2C%22address%22%3A%22%E8%BE%BD%E5%AE%81%E7%9C%81%E6%B2%88%E9%98%B3%E5%B8%82%E7%9A%87%E5%A7%91%E5%8C%BA%E5%B4%87%E5%B1%B1%E4%B8%AD%E8%B7%AF66%E5%8F%B7%22%2C%22iconPath%22%3A%22%2Fimages%2Fmini-location.png%22%2C%22height%22%3A30%2C%22width%22%3A30%2C%22callout%22%3A%7B%22bgColor%22%3A%22%23ffffff%22%2C%22borderColor%22%3A%22red%22%2C%22borderRadius%22%3A5%2C%22borderWidth%22%3A1%2C%22content%22%3A%22%E8%BE%BD%E5%AE%81%E5%A4%A7%E5%AD%A6%E5%B4%87%E5%B1%B1%E6%A0%A1%E5%8C%BA%22%2C%22display%22%3A%22ALWAYS%22%2C%22fontSize%22%3A13%2C%22padding%22%3A2%7D%7D",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "packageA/pages/maptooladd/maptooladd",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

@@ -1,0 +1,33 @@
+<!--垂直滚动-->
+<scroll-view-y 
+tabContent="{{tabContent}}" 
+bindtabsChange = "changeTabs"
+bindschoolChange = "changeSchool"
+bindtap="changeMarkersData"
+></scroll-view-y>
+
+
+<!-- 
+  中心
+    latitude:
+    longitude：
+  scale：缩放级别3-20
+  markers：标记点
+  skew:画面倾斜角度
+  enable-3D：3D展示
+  enable-overlooking：俯视
+ -->
+<map name="辽宁大学" enable-poi="true" show-scale="true" scale="20"  enable-building="true"
+  markers="{{markerss}}" enable-3D="true" include-points="{{points}}" style="width: 100%;height:100%"
+  latitude="{{latitude}}" 
+  longitude="{{longitude}}" 
+  bindregionchange = "bindRegionChange"
+  bindmarkertap="bindMarkerTap" bindtap="bindTap"
+  bindcallouttap="bindCalloutTap">
+</map>
+
+<view class="button_container">
+  <view class="button" bindtap="addLocation">
+    <text>添加导览</text>
+  </view>
+</view>

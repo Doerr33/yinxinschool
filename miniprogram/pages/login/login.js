@@ -32,8 +32,8 @@ Page({
     });
     await this.addUserInfoStorage();
     wx.hideLoading()
-    wx.reLaunch({
-      url: '/pages/life/life',
+    wx.navigateBack({
+      delta: 1,
     })
     wx.showToast({
       title: '登录成功',
@@ -114,11 +114,15 @@ Page({
       wx.setStorage({
         key: "userInfo",
         encrypt: true, // 若开启加密存储，setStorage 和 getStorage 需要同时声明 encrypt 的值为 true
-        data: JSON.stringify(this.data.userInfo),
+        data:JSON.stringify(this.data.userInfo) ,
       }).then(res=>{
         console.log("信息已经存储到本地",res);
+        getApp().globalData.userInfo = this.data.userInfo;
         resolve(res)
       })
     })
   },
+  onLoad(){
+    
+  }
 })

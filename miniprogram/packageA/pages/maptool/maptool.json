@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "scroll-view-y":"../../../components/scrollview_y/scrollview_y"
+  },
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom"
+}

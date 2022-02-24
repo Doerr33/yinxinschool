@@ -1,0 +1,9 @@
+<view class="cardList" bindtap="navToDetail">
+    <view class="toolTitle">
+        <view class="titileZh">{{toolConfig.toolTitleCh}}</view>
+        <view class="titileEn">{{toolConfig.toolTitleEn}}</view>
+    </view>
+    <view class="cardImage">
+        <image mode="aspectFill" src="{{toolConfig.imageUrl}}" class="backImage"></image>
+    </view>
+</view>

@@ -6,8 +6,12 @@
 -->
 <tabs tabs="{{tabs}}" bindtabsChange="tabsChange">
   <!-- 第一个tabs：学习模块 -->
+  <!-- 
+    双重循环index重名问题：
+      wx:for-index：设置父元素的index别名，如果父元素和子元素都设置为index，则拿不到父元素的
+   -->
   <block wx:if="{{tabs[0].isActive}}">
-    <view class="learnTabs" wx:for="{{lifeList}}">
+    <view class="learnTabs" wx:for="{{lifeList}}" wx:for-index="idx">
       <view class="imgNickname">
         <view class="avartor">
           <image src="{{item.userInfo.avatarUrl}}"></image>
@@ -20,23 +24,24 @@
         <text>{{item.content}}</text>
       </view>
       <view class="imagesList">
-        <view wx:if="{{item.images.length > 1}}" data-index="{{index}}" wx:for="{{item.images}}" wx:for-item = "images" bindtap="viewImages">
-          <image src='{{images}}' mode="aspectFill"></image>
+        <view wx:if="{{item.images.length > 1}}">
+          <image mode="aspectFill" bindtap="viewImages" data-index="{{idx}}" data-src="{{image}}" wx:for="{{item.images}}" wx:for-item="image" src="{{image}}"></image>
         </view>
-        <view wx:if="{{item.images.length == 1}}" data-index="{{index}}" wx:for="{{item.images}}" wx:for-item = "images" wx:key="index" class="oneImages" bindtap="viewImages">
-          <image src='{{images}}' mode="aspectFill"></image>
+        <view wx:if="{{item.images.length == 1}}" data-index="{{idx}}" wx:for="{{item.images}}" wx:for-item = "images" wx:key="index" class="oneImages" bindtap="viewImages">
+          <image bindtap="viewImages" data-index="{{idx}}" src='{{images}}' data-src="{{images}}" mode="aspectFill"></image>
         </view>
       </view>
       <view class="learnTime">
         <view class="publishTime">
           <text>{{item.time}}</text>
         </view>
-        <view class="more" bindtap="showLikeCommentPannel">
+        <!-- 点赞操作按钮 -->
+        <view data-index="{{idx}}"  class="more" bindtap="showLikeCommentPannel">
           <text class="cuIcon-more"></text>
         </view>
-        <view class="clickLoveCommentPannel" wx:if="{{showLoveCommPannel}}">
+        <view class="clickLoveCommentPannel" wx:if="{{showOperationPannelIndex  == idx}}">
           <view class="loveCommentPannel">
-            <view class="tab clickLove">
+            <view class="tab clickLove" data-index="{{idx}}" catchtap = "clickLearnLike">
               <text class="cuIcon-like"></text>
               点赞
             </view>
@@ -47,6 +52,7 @@
           </view>
         </view>
       </view>
+      <!-- 点赞列表 -->
       <view class="learnLove">
         <text wx:if = "{{item.likeList != 0}}" class="cuIcon-like"></text>
         <text wx:for="{{item.likeList}}" wx:for-item = "likeItem"> {{likeItem.nickName}},</text>
@@ -64,7 +70,9 @@
       </view>
     </view>
   </block>
-  <block wx:elif="{{tabs[1].isActive}}">2</block>
+  <block wx:elif="{{tabs[1].isActive}}">
+    
+  </block>
   <block wx:elif="{{tabs[2].isActive}}">3</block>
   <block wx:else>4</block>
 </tabs>

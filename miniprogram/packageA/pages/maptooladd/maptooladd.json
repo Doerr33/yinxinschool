@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mypicker":"../../../components/my_picker/my_picker",
+    "publishMessageImage":"../../../components/publishMessageImage/publishMessageImage"
+  }
+}
