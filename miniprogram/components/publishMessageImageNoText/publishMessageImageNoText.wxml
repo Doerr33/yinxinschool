@@ -1,0 +1,22 @@
+<view class="publishMessImage">
+  <view class="imagesList">
+    <view data-index = "{{index}}" wx:for="{{images}}" wx:key="index" class="addImageList" bindtap="viewImages">
+      <image src='{{item}}' mode="aspectFill"></image>
+      <view catchtap="delImages" class="delImage cuIcon-close" data-index="{{index}}"></view>
+    </view>
+    <!-- 添加图片 -->
+    <view wx:if="{{images.length < 9}}" class="addImage" bindtap="chooseMedias">
+      <view class="addIcon">
+        <text class="cuIcon-camera"></text>
+      </view>
+      <view class="textIcon">添加图片</view>
+    </view>
+  </view>
+  <view class="info">
+    <view class="infoText">
+      <text class="cuIcon-warn">文字不多于2000字,图片不多于9张</text>
+    </view>
+    <view class="infoLine"></view>
+  </view>
+</view>
+<view class="publish" bindtap="publishInfo">立即发布</view>

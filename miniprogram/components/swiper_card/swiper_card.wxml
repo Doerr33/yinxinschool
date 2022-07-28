@@ -20,8 +20,8 @@ indicator-color="#8799a3"
 indicator-active-color="#0081ff">
 <!-- 通过样式来控制当前页面显示的效果和其他不同 -->
   <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
-    <view class="swiper-item">
-      <image src="{{item.url}}" mode="widthFix"></image>
+    <view class="swiper-item" >
+      <image bindtap="viewImages" data-index="{{index}}" data-src = "{{item.url}}" src="{{item.url}}" mode="widthFix"></image>
     </view>
   </swiper-item>
 </swiper>

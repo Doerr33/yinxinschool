@@ -76,6 +76,7 @@ Page({
             this.setData({
               lifeList: this.data.lifeList.concat(v)
             })
+          
         }
       })
     })
@@ -158,31 +159,20 @@ Page({
       console.log("调用函数2");
     })
   },
-  dingyue(e) {
-    wx.requestSubscribeMessage({
-      tmplIds: ['Er4q6nVn9QW2F1i6XF7kuSeDY8KStAg89mVBJ1DNxPg'],
-      success(res) {
-        console.log("订阅成功", res);
-      }
-    })
-  },
-  send(e) {
-    wx.cloud.callFunction({
-        name: "subscribeInfo"
-      })
-      .then(res => {
-        console.log("发送成功", res);
-      })
-  },
+
   // 预览图片
   viewImages(e) {
-    // console.log("朋友圈条目",index);
-    var current = e.target.dataset.src;
-    var index = e.target.dataset.index
     console.log(e);
+    let index = e.currentTarget.dataset.index;
+    let src = e.currentTarget.dataset.src["url"];
+    let urls = [];
+    let images = this.data.lifeList[index].images;
+    for(let i = 0; i < images.length; i++){
+      urls.push(images[i].url);
+    }
     wx.previewImage({
-      current: current, // 当前显示图片的http链接  
-      urls: this.data.lifeList[index].images // 需要预览的图片http链接列表  
+      current:src,
+      urls: urls,
     })
   },
   onLoad(e) {
@@ -190,12 +180,12 @@ Page({
     this.getLifeList();
     console.log();
     this.setData({
-      userInfo:getApp().globalData.userInfo
+      userInfo: getApp().globalData.userInfo
     })
   },
-  onShow(){
+  onShow() {
     this.setData({
-      userInfo:getApp().globalData.userInfo
+      userInfo: getApp().globalData.userInfo
     })
   }
 })

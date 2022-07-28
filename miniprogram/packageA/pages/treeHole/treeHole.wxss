@@ -1,0 +1,63 @@
+/* packageA/pages/treeHole/treeHole.wxss */
+page{
+    margin-top: 140rpx;
+    background-image: url(https://img1.baidu.com/it/u=1422158288,3344050337&fm=253&fmt=auto&app=138&f=JPEG?w=870&h=500);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200% 100%;
+}
+.button_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 99;
+    
+  }
+  
+  .button { 
+    
+    z-index: 1000000;
+    position: fixed;
+    bottom: 30rpx;
+    width: 145rpx;
+    height: 145rpx;
+    margin: 10rpx;
+    background-color: rgba(192, 192, 192, 0.3);
+    border-radius: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: bold;
+    color:white;
+  }
+  .backTree{
+    position: fixed;
+    top: 200rpx;
+    left: 125rpx;
+    bottom: 800rpx;
+    width: 500rpx;
+    height: 700rpx;
+    background-color: rgba(192, 192, 192, 0.4);
+    border-radius: 60rpx;
+    color:white;
+  }
+  .TreeMeiri{
+    width: 400rpx;
+    height: 500rpx;
+    margin-left: 50rpx;
+    margin-top: 40rpx;
+    font-size: 40rpx;
+    font-weight: bolder;
+    color: yellow;
+  }
+  .contentTree{
+    overflow: scroll;
+    font-size:32rpx ;
+    word-break:break-all;
+    width: 400rpx;
+    height: 500rpx;
+    text-indent:2rem;
+    color: white;
+  }

@@ -1,0 +1,7 @@
+<view class="cu-form-group showInfo">你分享的心情(秘密)会随机被获取到,但树洞并不会显示你的个人信息：</view>
+<view class="cu-form-group align-start">
+    <textarea maxlength="-1" bindinput="textareaAInput" placeholder="分享秘密" name="content"></textarea>
+</view>
+<view class="button">
+    <button type="primary" formType="submit"  bindtap="publishNews">发布</button>
+</view>

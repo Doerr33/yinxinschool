@@ -46,4 +46,9 @@ Page({
       })
     }
   },
+  onShow(){
+    this.setData({
+      userInfo:getApp().globalData.userInfo
+    })
+  }
 })

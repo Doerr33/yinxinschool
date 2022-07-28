@@ -1,0 +1,12 @@
+.showInfo{
+    color: rgb(110, 110, 110);
+    font-size: 30rpx;
+    text-indent:2rem
+  }
+
+.button{
+    margin: 0 auto;
+}
+.button button{
+    margin-top: 10rpx;
+}

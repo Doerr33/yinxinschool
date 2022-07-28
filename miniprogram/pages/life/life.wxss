@@ -59,13 +59,14 @@ page{
 .imagesList image{
   margin: 3rpx;
   margin-bottom: 0rpx;
-  /* background-color: red; */
+  background-color: rgb(180, 180, 180);
   width: 190rpx;
   height: 190rpx;
 }
 .oneImages image{
   width: 550rpx;
   height: 300rpx;
+  background-color: rgb(209, 207, 207);
 }
 .learnContent text{
   word-break: break-all;

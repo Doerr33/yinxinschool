@@ -1,15 +1,6 @@
 {
     "setting": {},
     "condition": {
-        "plugin": {
-            "list": []
-        },
-        "game": {
-            "list": []
-        },
-        "gamePlugin": {
-            "list": []
-        },
         "miniprogram": {
             "list": [
                 {
@@ -53,8 +44,63 @@
                     "pathName": "packageA/pages/maptooladd/maptooladd",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "packageA/pages/signin/signin",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "packageA/pages/signinadd/signinadd",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "packageA/pages/signintotal/signintotal",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "packageA/pages/signinadd/signinadd",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "packageA/pages/sigindetail/signdetail",
+                    "query": "scene: \"id=xxxxxx\"",
+                    "scene": null
+                },
+                {
+                    "name": "扫码跳转",
+                    "pathName": "pages/index/index",
+                    "query": "scene=12345678910111213141516141414515141515514544514554411251145511125141455115522",
+                    "scene": 1011
+                },
+                {
+                    "name": "扫码",
+                    "pathName": "pages/index/index",
+                    "query": "userInfo=%7B%22nickName%22%3A%22Doerr%22%2C%22gender%22%3A0%2C%22language%22%3A%22zh_CN%22%2C%22city%22%3A%22%22%2C%22province%22%3A%22%22%2C%22country%22%3A%22%22%2C%22avatarUrl%22%3A%22https%3A%2F%2Fthirdwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDmCSyOOYIKX1wNbLzk8X9SGn3fLg0ywEzaQFJJ2sjxFBuVFTQWktcicrNKEKRLxdsib6MHNpzPShv9QwvMo9ia55A%2F132%22%2C%22openid%22%3A%22o9zYN5guVbbayZ8-osibjtutYHNs%22%7D",
+                    "scene": 1011
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/schoolspace/schoolspace",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/logisticsService/logisticsService",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
-    }
+    },
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
 }

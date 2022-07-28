@@ -33,5 +33,19 @@ Component({
         cardCur: e.detail.current
       })
     },
+    viewImages(e){
+      console.log(e);
+      let src = e.currentTarget.dataset.src;
+      let swiperList = this.properties.swiperList;
+      let urls = []
+      Object.values(swiperList).forEach(values => {
+        urls.push(values.url);
+      });
+      console.log(urls);
+      wx.previewImage({
+        current: src,
+        urls: urls,
+      })
+    }
   }
 })

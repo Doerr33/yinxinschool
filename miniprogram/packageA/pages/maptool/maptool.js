@@ -90,6 +90,7 @@ Page({
                 let locationData = {};
                 let locaTionArray = [];
                 for(let i = 0; i < res.result.data.length; i++){
+                    console.log(i);
                     locationData.location = res.result.data[i].location;
                     locationData.classify = res.result.data[i].pickerIndex;
                     locationData.school = res.result.data[i].pickerIndex1;
@@ -106,6 +107,7 @@ Page({
                     locationData.images = res.result.data[i].images;
                     locationData.content = res.result.data[i].content;
                     locaTionArray.push(locationData);
+                    locationData = {};
                 }
                 
                 
@@ -129,12 +131,11 @@ Page({
 
     bindCalloutTap(e) {
         let markerId = e.markerId;
-        let markers = this.data.markers;
-        let markerIndex = markers.findIndex((element) => {
+        let markerIndex = this.data.markerss.findIndex((element) => {
             return element.id == markerId;
         })
         console.log("标记点index",markerIndex);
-        let marker = markers[markerIndex];
+        let marker = this.data.markerss[markerIndex];
         console.log("标记点信息",marker);
         marker = encodeURIComponent(JSON.stringify(marker));
         wx.navigateTo({
@@ -150,12 +151,12 @@ Page({
         })
     },
     onShow() {
-        // 显示页面获取map列表
-        this.getLocation();
-        this.setData({
-            latitude: 41.83355044524474,
-            longitude: 123.40609788894653
-        })
+        // // 显示页面获取map列表
+        // this.getLocation();
+        // this.setData({
+        //     latitude: 41.83355044524474,
+        //     longitude: 123.40609788894653
+        // })
     },
     onReady() {
 

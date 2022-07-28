@@ -1,0 +1,6 @@
+<publishMessageImageNoText 
+images = "{{images}}"
+database = "{{database}}"
+userInfo = "{{userInfo}}"
+bindimagesChange = "imagesChange" 
+></publishMessageImageNoText>

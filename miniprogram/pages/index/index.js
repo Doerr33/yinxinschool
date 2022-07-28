@@ -8,10 +8,10 @@ const db = wx.cloud.database().collection("background");
 Page({
   data: {
     backGround:[],
-    
+    fileID:''
   },
   // 生命周期函数
-  onLoad(){
+  onLoad(options){
     this.getBackground();
   },
   // 获取index页面背景
